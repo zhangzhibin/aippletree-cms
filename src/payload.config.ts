@@ -6,6 +6,7 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+import { getCustomPosts, getSimplifiedPosts } from './routes/posts'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -41,4 +42,14 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
+  // routes: {
+  //   api: {
+  //     custom: {
+  //       posts: {
+  //         get: getCustomPosts,
+  //         getSimplified: getSimplifiedPosts,
+  //       },
+  //     },
+  //   },
+  // },
 })

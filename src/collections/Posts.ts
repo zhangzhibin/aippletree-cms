@@ -1,5 +1,6 @@
 import { CollectionConfig } from 'payload'
 import slugify from 'slugify'
+import { marked } from 'marked'
 
 const Posts: CollectionConfig = {
   slug: 'posts',
@@ -11,6 +12,7 @@ const Posts: CollectionConfig = {
   access: {
     read: () => true,
   },
+  enableQueryPresets: true,
   fields: [
     {
       name: 'title',
@@ -39,11 +41,11 @@ const Posts: CollectionConfig = {
     },
     {
       name: 'content',
-      type: 'code',
+      type: 'textarea',
       label: '内容 (Markdown)',
       admin: {
         description: '使用Markdown语法编写文章内容',
-        language: 'markdown',
+        rows: 40,
       },
       required: true,
     },
