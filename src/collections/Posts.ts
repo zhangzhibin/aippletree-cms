@@ -1,6 +1,6 @@
 import { CollectionConfig } from 'payload'
 import slugify from 'slugify'
-import { marked } from 'marked'
+// import { marked } from 'marked'
 
 const Posts: CollectionConfig = {
   slug: 'posts',
